@@ -12,34 +12,22 @@
             function init() {
                 var images = document.getElementsByTagName("img");
                 for (var i = 0; i < images.length; i++) {
-                    images[i].onclick = showAnswer;
+                    images[i].onmouseover = showAnswer;
+                    images[i].onmouseout = hideAnswer;
                 };
             }
-            function showImageZero() {
-                var image0 = document.getElementById("zero");
-                image0.src = "zero.jpg";
+            function showAnswer(eventObj) {
+                var image = eventObj.target;
+                var name = image.id;
+                name = name + ".jpg";
+                image.src = name;
             };
-            function showImageOne() {
-                var image0 = document.getElementById("one");
-                image0.src = "one.jpg";
+            function hideAnswer(eventObj) {
+                var image = eventObj.target;
+                name = image.id;
+                name = name + "blur.jpg";
+                image.src = name;
             };
-            function showImageTwo() {
-                var image0 = document.getElementById("two");
-                image0.src = "two.jpg";
-            };
-            function showImageThree() {
-                var image0 = document.getElementById("three");
-                image0.src = "three.jpg";
-            };
-            function showImageFour() {
-                var image0 = document.getElementById("four");
-                image0.src = "four.jpg";
-            };
-            function showImageFive() {
-                var image0 = document.getElementById("five");
-                image0.src = "five.jpg";
-            };
-
         </script>
     </head>
     <body>
