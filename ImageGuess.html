@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Image Guess </title>
+        <style> 
+            body { margin: 20px; }
+            img { margin: 20px }
+        </style>
+        <script> 
+            window.onload = init;
+            function init() {
+                var images = document.getElementsByTagName("img");
+                for (var i = 0; i < images.length; i++) {
+                    images[i].onclick = showAnswer;
+                };
+            }
+            function showImageZero() {
+                var image0 = document.getElementById("zero");
+                image0.src = "zero.jpg";
+            };
+            function showImageOne() {
+                var image0 = document.getElementById("one");
+                image0.src = "one.jpg";
+            };
+            function showImageTwo() {
+                var image0 = document.getElementById("two");
+                image0.src = "two.jpg";
+            };
+            function showImageThree() {
+                var image0 = document.getElementById("three");
+                image0.src = "three.jpg";
+            };
+            function showImageFour() {
+                var image0 = document.getElementById("four");
+                image0.src = "four.jpg";
+            };
+            function showImageFive() {
+                var image0 = document.getElementById("five");
+                image0.src = "five.jpg";
+            };
+
+        </script>
+    </head>
+    <body>
+        <img id="zero" src="zeroblur.jpg">
+        <img id="one" src="oneblur.jpg">
+        <img id="two" src="twoblur.jpg">
+        <img id="three" src="threeblur.jpg">
+        <img id="four" src="fourblur.jpg">
+        <img id="five" src="fiveblur.jpg">
+    </body>
+</html>
